@@ -13,10 +13,10 @@ io.on("connection", (socket) => {
   socket.emit("your id", socket.id);
   // Every time a user sends a mseesage .on listens for message
   // Body contains the meesage
-  socket.on("send meesage", (body) => {
+  socket.on("send message", (body) => {
     // io emmit sends out to all people connected
     io.emit("message", body);
   });
 });
 
-server.listen(8000, () => consol.log("Server is running on port 8000"));
+server.listen(8000, () => console.log("server is running on port 8000"));
